@@ -1,12 +1,28 @@
 <aside class="p-6">
   <h1>ATM VAS</h1>
   <ul class="p-2 list-none flex flex-col gap-4 w-full">
-    <li
-      *ngFor="let item of routes"
-      class="h-10 w-full rounded-md p-2"
-      [routerLink]="item.route"
-    >
-      {{ item.label }}
+    <li *ngFor="let item of routes" class="h-fit w-full rounded-md">
+      <p
+        (click)="route(item)"
+        class="w-full rounded-md p-2 flex justify-between"
+      >
+        <span>
+          <nz-icon [nzType]="item.icon" nzTheme="outline" />
+          {{ item.label }}</span
+        >
+        <nz-icon
+          *ngIf="item.sideRoutes.length"
+          [nzType]="item.isOpened ? 'minus' : 'plus'"
+          nzTheme="outline"
+          style="font-size: 10px"
+        ></nz-icon>
+      </p>
+
+      <div class="flex flex-col gap-2 p-3" *ngIf="item.isOpened">
+        <span *ngFor="let side of item.sideRoutes" class="p-2 rounded-md">{{
+          side.label
+        }}</span>
+      </div>
     </li>
   </ul>
 </aside>

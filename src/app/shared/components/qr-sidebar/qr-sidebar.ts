@@ -1,54 +1,75 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
+import { Component, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 @Component({
   selector: 'app-qr-sidebar',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, NzIconModule],
   templateUrl: './qr-sidebar.html',
   styleUrl: './qr-sidebar.scss',
 })
 export class QrSidebar {
+  router = inject(Router);
   routes = [
     {
       label: 'Dashboard',
       route: 'dashboard',
+      icon: 'dashboard',
+      sideRoutes: [],
+      isOpened: false,
     },
     {
-      label: 'Tenants',
+      label: 'Services Managment',
       route: 'tenants',
+      icon: 'setting',
+      isOpened: false,
+      sideRoutes: [
+        {
+          label: 'Value Setup',
+          route: 'dashboard',
+        },
+        {
+          label: 'Template Setup',
+          route: 'dashboard',
+        },
+        {
+          label: 'Services',
+          route: 'dashboard',
+        },
+      ],
     },
     {
-      label: 'Users',
+      label: 'Fees Profile',
       route: 'users',
+      icon: 'credit-card',
+      sideRoutes: [],
+      isOpened: false,
     },
     {
-      label: 'Roles',
+      label: 'Users Managment',
       route: 'roles',
-    },
-    {
-      label: 'Wallets',
-      route: 'wallets',
-    },
-    {
-      label: 'Merchants',
-      route: 'merchants',
-    },
-    {
-      label: 'Fees',
-      route: 'fees',
-    },
-    {
-      label: 'Transactions',
-      route: 'transactions',
-    },
-    {
-      label: 'Audit Logs',
-      route: 'audit-logs',
-    },
-    {
-      label: 'Login Audits',
-      route: 'login-audits',
+      icon: 'user',
+      isOpened: false,
+      sideRoutes: [
+        {
+          label: 'Departments',
+          route: 'dashboard',
+        },
+        {
+          label: 'Roles',
+          route: 'dashboard',
+        },
+        {
+          label: 'User List',
+          route: 'dashboard',
+        },
+      ],
     },
   ];
+
+  route(item: any) {
+    item.sideRoutes.length
+      ? (item.isOpened = !item.isOpened)
+      : this.router.navigateByUrl(item.route);
+  }
 }
