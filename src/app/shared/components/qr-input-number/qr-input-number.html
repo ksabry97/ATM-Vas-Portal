@@ -10,22 +10,14 @@
       [placeholder]="placeholder"
       [disabled]="disabled"
       [readonly]="readonly"
-      [type]="type"
+      type="number"
+      [value]="value"
       [nzStatus]="control.touched && control.invalid ? 'error' : ''"
       (input)="onChange($event)"
       (blur)="touched()"
-      [value]="value"
     />
-    <button
-      *ngIf="showClear"
-      nz-button
-      nzType="text"
-      nzSize="small"
-      class="clear-button"
-      (click)="clearValue()"
-    >
-      <i nz-icon nzType="close" nzTheme="outline"></i>
-    </button>
+
+    <span class="input-number-icon" *ngIf="unit">{{ unit }}</span>
   </div>
 
   <!-- Error Message -->

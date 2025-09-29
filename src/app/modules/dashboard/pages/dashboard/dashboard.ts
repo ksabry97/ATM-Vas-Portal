@@ -10,22 +10,44 @@ import { Component } from '@angular/core';
 export class Dashboard {
   items = [
     {
-      label: 'Tenants',
+      label: 'Requests Need Action',
+      count: 30,
+      icon: '',
+      color: 'yellow',
+    },
+    {
+      label: 'Approved Requests',
       count: 30,
       icon: '',
     },
     {
-      label: 'Users',
+      label: 'Rejected Requests',
       count: 30,
       icon: '',
     },
     {
-      label: 'Transactions',
+      label: 'Total Services',
       count: 30,
       icon: '',
     },
     {
-      label: 'Revenue',
+      label: 'Templates',
+      count: 30,
+      icon: '',
+      color: 'yellow',
+    },
+    {
+      label: 'Fee Profiles',
+      count: 30,
+      icon: '',
+    },
+    {
+      label: 'System Users',
+      count: 30,
+      icon: '',
+    },
+    {
+      label: 'Departments',
       count: 30,
       icon: '',
     },

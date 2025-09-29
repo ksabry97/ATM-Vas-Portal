@@ -1,19 +1,24 @@
-.card {
-  box-shadow: 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  height: 150px;
-  //   border-bottom: 4px solid var(--primary);
-  transition: transform 0.2s ease-in-out;
-  background-color: #fff;
+header {
   h1 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 700;
   }
+  p {
+    color: grey;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.card {
+  border-top: 2px solid;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 30%;
   p {
     font-size: 16px;
     font-weight: 500;
   }
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.08);
+  span {
+    font-weight: 700;
   }
 }

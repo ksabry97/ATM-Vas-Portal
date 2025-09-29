@@ -39,6 +39,11 @@
     height: 42px;
     border-radius: 8px;
   }
+  &.filled {
+    input {
+      background: #f1f1f1;
+    }
+  }
 }
 
 .error-message {
@@ -60,6 +65,14 @@
   inset-inline-end: 2%;
   top: 10%;
 }
+
+.input-number-icon {
+  position: absolute;
+  inset-inline-end: 6%;
+  top: 22%;
+  padding-inline-start: 8px;
+  border-inline-start: 1px solid grey;
+}
 .submit-btn {
   background-color: var(--primary);
   color: #fff;
@@ -67,4 +80,19 @@
   &:disabled {
     opacity: 0.4;
   }
+}
+.export-btn {
+  border: 1px solid #d9d9d9 !important;
+  height: 40px;
+  color: var(--primary);
+}
+.table-wrapper {
+  border: 1px solid #f4f4f4;
+  overflow: hidden;
+}
+.ant-switch-checked {
+  background-color: var(--primary);
+}
+input[type="radio"] {
+  accent-color: var(--primary);
 }

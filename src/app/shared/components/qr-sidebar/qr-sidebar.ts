@@ -40,7 +40,7 @@ export class QrSidebar {
     },
     {
       label: 'Fees Profile',
-      route: 'users',
+      route: 'fees',
       icon: 'credit-card',
       sideRoutes: [],
       isOpened: false,

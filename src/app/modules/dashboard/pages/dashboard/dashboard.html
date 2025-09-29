@@ -1,9 +1,21 @@
-<div class="flex justify-between gap-4">
+<header class="w-full">
+  <h1>System Overview</h1>
+  <p class="flex w-full justify-between">
+    Real time meterics and performance indicator for your ATM services managment
+    <span>Last Update 10:10 am</span>
+  </p>
+</header>
+
+<div class="flex flex-wrap gap-5 w-full mt-8">
   <div
-    class="w-1/4 card rounded-md flex justify-center items-center flex-col gap-4"
+    class="card h-fit p-4 rounded-lg flex-grow-0 flex justify-between"
     *ngFor="let item of items"
+    [ngStyle]="{ 'border-color': item.color }"
   >
-    <h1>{{ item.label }}</h1>
-    <p>{{ item.count }}</p>
+    <p>
+      <span></span>
+      {{ item.label }}
+    </p>
+    <span>{{ item.count }}</span>
   </div>
 </div>

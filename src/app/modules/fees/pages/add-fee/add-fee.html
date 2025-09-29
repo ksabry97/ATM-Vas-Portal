@@ -1,1 +1,72 @@
-<p>add-fee works!</p>
+<app-modal-header
+  [description]="'configure a new ATM service endpoint and settings'"
+  [title]="'Create services fees'"
+></app-modal-header>
+<div class="content">
+  <form [formGroup]="feeGroup" class="flex flex-col gap-5">
+    <section
+      class="flex w-full items-end justify-between gap-3"
+      [ngClass]="{
+        'items-center':
+          feeGroup.get('feesProfileName')?.invalid &&
+          feeGroup.get('feesProfileName')?.touched
+      }"
+    >
+      <app-qr-input
+        class="w-1/2"
+        [label]="'Fees name'"
+        [placeholder]="'ex. pay bills'"
+        formControlName="feesProfileName"
+        [controlName]="'feesProfileName'"
+        [parentGroup]="feeGroup"
+        [filled]="true"
+        [required]="true"
+      ></app-qr-input>
+      <div class="flex items-center justify-between w-1/2 mb-2">
+        <label>Enable Fees </label>
+        <nz-switch formControlName="isActive"></nz-switch>
+      </div>
+    </section>
+    <section class="flex w-full gap-3 flex-col">
+      <label>Value </label>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3 w-1/2">
+          <input type="radio" formControlName="feesProfileType" [value]="1" />
+          <label>Fixed Amount</label>
+          <app-qr-input-number
+            class="w-3/5"
+            [placeholder]="'ex. pay bills'"
+            formControlName="fixedAmount"
+            [controlName]="'fixedAmount'"
+            [parentGroup]="feeGroup"
+            [filled]="true"
+            [required]="true"
+            [showClear]="true"
+            [unit]="'XOF'"
+          ></app-qr-input-number>
+        </div>
+        <div class="flex items-center gap-3 w-1/2">
+          <input type="radio" formControlName="feesProfileType" [value]="2" />
+          <label>Percentage </label>
+          <app-qr-input-number
+            class="w-3/5"
+            [placeholder]="'ex. pay bills'"
+            formControlName="percentage"
+            [controlName]="'percentage'"
+            [parentGroup]="feeGroup"
+            [filled]="true"
+            [required]="true"
+            [unit]="'%'"
+          ></app-qr-input-number>
+        </div>
+      </div>
+    </section>
+    <section class="flex w-full items-end justify-between gap-3 last-section">
+      <div class="flex items-center justify-between w-1/2 mb-2">
+        <label>Allow VAT </label>
+        <nz-switch formControlName="isVatEnabled"></nz-switch>
+      </div>
+    </section>
+  </form>
+</div>
+<app-modal-footer [submitText]="'Save & Submit'"></app-modal-footer>
