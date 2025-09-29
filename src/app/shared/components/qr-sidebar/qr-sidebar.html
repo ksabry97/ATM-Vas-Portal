@@ -19,9 +19,11 @@
       </p>
 
       <div class="flex flex-col gap-2 p-3" *ngIf="item.isOpened">
-        <span *ngFor="let side of item.sideRoutes" class="p-2 rounded-md">{{
-          side.label
-        }}</span>
+        <span
+          *ngFor="let side of item.sideRoutes"
+          class="p-2 rounded-md side-route"
+          >{{ side.label }}</span
+        >
       </div>
     </li>
   </ul>
