@@ -12,7 +12,7 @@ import { GlobalService } from './shared/services/global.service';
 })
 export class App implements OnInit {
   isLoading = signal(false);
-  protected readonly title = signal('qr-swtich-portal');
+  protected readonly title = signal('ATM-VAS');
   globalServ = inject(GlobalService);
 
   ngOnInit(): void {
