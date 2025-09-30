@@ -9,6 +9,7 @@ import { EntityHeader } from '../../../../shared/components/entity-header/entity
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 import { CommonModule } from '@angular/common';
 import { EntityCard } from '../../../../shared/components/entity-card/entity-card';
+import { CreateService } from '../../components/create-service/create-service';
 
 @Component({
   selector: 'app-services-setup',
@@ -18,6 +19,7 @@ import { EntityCard } from '../../../../shared/components/entity-card/entity-car
 })
 export class ServicesSetup {
   globalServ = inject(GlobalService);
+  createServ = CreateService;
   items = [
     {
       label: 'Total Services',

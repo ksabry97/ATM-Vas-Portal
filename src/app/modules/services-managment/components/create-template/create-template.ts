@@ -81,6 +81,6 @@ export class CreateTemplate {
   }
 
   submit() {
-    console.log(this.templateGroup.value, 'a3333333333333');
+    console.log(this.templateGroup.value);
   }
 }
