@@ -1,0 +1,75 @@
+<app-modal-header
+  [description]="'configure a new ATM service endpoint and settings'"
+  [title]="'Create services value'"
+></app-modal-header>
+<div class="content">
+  <form [formGroup]="valueForm" class="flex flex-col gap-5">
+    <section
+      class="flex w-full items-end justify-between gap-3"
+      [ngClass]="{
+        'items-center':
+          valueForm.get('serviceValueName')?.invalid &&
+          valueForm.get('serviceValueName')?.touched
+      }"
+    >
+      <app-qr-input
+        class="w-1/2"
+        [label]="'Value name'"
+        [placeholder]="'ex. pay bills'"
+        formControlName="serviceValueName"
+        [controlName]="'serviceValueName'"
+        [parentGroup]="valueForm"
+        [filled]="true"
+        [required]="true"
+      ></app-qr-input>
+      <div class="flex items-center justify-between w-1/2 mb-2">
+        <label>Enable Value </label>
+        <nz-switch formControlName="isActive"></nz-switch>
+      </div>
+    </section>
+    <section class="flex w-full gap-3 flex-col last-section">
+      <label>Value </label>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3 w-1/2">
+          <input type="radio" formControlName="serviceValueType" [value]="1" />
+          <label>Fixed Value</label>
+          <app-qr-input-number
+            class="w-3/5"
+            [placeholder]="'ex. pay bills'"
+            formControlName="flatValue"
+            [controlName]="'flatValue'"
+            [parentGroup]="valueForm"
+            [filled]="true"
+            [unit]="'XOF'"
+          ></app-qr-input-number>
+        </div>
+        <div class="flex items-center gap-3 w-1/2">
+          <input type="radio" formControlName="serviceValueType" [value]="2" />
+          <label>Range </label>
+          <div class="range flex">
+            <nz-icon
+              nzType="swap"
+              nzTheme="outline"
+              style="color: grey; font-size: 14px"
+              class="icon"
+            />
+            <input
+              type="number"
+              class="w-1/2 p-2"
+              formControlName="minValue"
+              placeholder="start"
+            />
+            <input
+              type="number"
+              class="w-1/2 p-2"
+              formControlName="maxValue"
+              placeholder="end"
+            />
+            <span class="input-number-icon">XOF</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+</div>
+<app-modal-footer [submitText]="'Save & Submit'"></app-modal-footer>

@@ -7,6 +7,7 @@ import {
 import { GlobalService } from '../../../../shared/services/global.service';
 import { EntityHeader } from '../../../../shared/components/entity-header/entity-header';
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
+import { CreateValue } from '../../components/create-value/create-value';
 
 @Component({
   selector: 'app-value-setup',
@@ -16,6 +17,7 @@ import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 })
 export class ValueSetup {
   globalServ = inject(GlobalService);
+  createVal = CreateValue;
   columns: TableColumn[] = [
     { field: 'id', header: 'Create Date', sortable: false },
     { field: 'name', header: 'Service Value Name', sortable: false },
