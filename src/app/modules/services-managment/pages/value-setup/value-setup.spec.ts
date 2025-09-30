@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TransactionsList } from './transactions-list';
+import { ValueSetup } from './value-setup';
 
-describe('TransactionsList', () => {
-  let component: TransactionsList;
-  let fixture: ComponentFixture<TransactionsList>;
+describe('ValueSetup', () => {
+  let component: ValueSetup;
+  let fixture: ComponentFixture<ValueSetup>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TransactionsList]
+      imports: [ValueSetup]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TransactionsList);
+    fixture = TestBed.createComponent(ValueSetup);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

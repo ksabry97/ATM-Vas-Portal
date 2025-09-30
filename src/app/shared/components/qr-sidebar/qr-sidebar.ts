@@ -25,16 +25,16 @@ export class QrSidebar {
       isOpened: false,
       sideRoutes: [
         {
-          label: 'Value Setup',
-          route: 'dashboard',
-        },
-        {
           label: 'Template Setup',
-          route: 'dashboard',
+          route: 'template-setup',
         },
         {
           label: 'Services',
-          route: 'dashboard',
+          route: 'services-setup',
+        },
+        {
+          label: 'Value Setup',
+          route: 'value-setup',
         },
       ],
     },

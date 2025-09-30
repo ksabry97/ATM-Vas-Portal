@@ -1,0 +1,20 @@
+<div class="flex flex-col gap-4">
+  <app-entity-header
+    [title]="'Value Setup'"
+    [description]="'Manage ATM services, configurations and monitoring'"
+    (isCreateClicked)="openModel()"
+  ></app-entity-header>
+  <div class="table-wrapper rounded-md">
+    <app-qr-table
+      [columns]="columns"
+      [data]="banks"
+      [actions]="actions"
+      [paginator]="true"
+      [rows]="10"
+    ></app-qr-table>
+  </div>
+</div>
+<!-- <app-qr-modal
+  [modalComponent]="addFee"
+  [isVisible]="globalServ.isModalOpened()"
+></app-qr-modal> -->

@@ -1,0 +1,15 @@
+.card {
+  background-color: #f3f3f3;
+  height: 140px;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 600;
+    span {
+      font-weight: 700;
+    }
+  }
+}
