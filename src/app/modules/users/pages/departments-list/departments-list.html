@@ -1,0 +1,20 @@
+<div class="flex flex-col gap-4">
+  <app-entity-header
+    [title]="'Department Managment'"
+    [description]="'Define roles and assign permissions'"
+    (isCreateClicked)="openModel()"
+  ></app-entity-header>
+  <div class="table-wrapper rounded-md">
+    <app-qr-table
+      [columns]="columns"
+      [data]="banks"
+      [actions]="actions"
+      [paginator]="true"
+      [rows]="10"
+    ></app-qr-table>
+  </div>
+</div>
+<app-qr-modal
+  [modalComponent]="createDep"
+  [isVisible]="globalServ.isModalOpened()"
+></app-qr-modal>

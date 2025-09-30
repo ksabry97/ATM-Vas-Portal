@@ -1,0 +1,69 @@
+<app-modal-header
+  [description]="
+    'create a new department with organizational structure and budget allocation'
+  "
+  [title]="'Create New Department'"
+></app-modal-header>
+<div class="content">
+  <form [formGroup]="deparmtentForm" class="flex flex-col gap-5">
+    <section
+      class="flex w-full items-end justify-between gap-3"
+      [ngClass]="{
+        'items-center':
+          deparmtentForm.get('departmentName')?.invalid &&
+          deparmtentForm.get('departmentName')?.touched
+      }"
+    >
+      <app-qr-input
+        class="w-1/2"
+        [label]="'Department Name'"
+        [placeholder]="'ex. sam'"
+        formControlName="departmentName"
+        [controlName]="'departmentName'"
+        [parentGroup]="deparmtentForm"
+        [filled]="true"
+        [required]="true"
+      ></app-qr-input>
+      <div class="flex items-center justify-between w-1/2 mb-2">
+        <label>Enable Department </label>
+        <nz-switch formControlName="isActive"></nz-switch>
+      </div>
+    </section>
+    <section class="flex w-full gap-2 flex-col">
+      <label>Description</label>
+      <textarea
+        class="p-3"
+        placeholder="write here what services do..."
+        formControlName="description"
+      ></textarea>
+    </section>
+    <section class="flex w-full gap-3 flex-col last-section">
+      <div class="flex gap-3">
+        <app-qr-select
+          formControlName="managerId"
+          [controlName]="'managerId'"
+          [parentGroup]="deparmtentForm"
+          [options]="types"
+          [label]="'Manager'"
+          [placeholder]="'select user'"
+          [required]="true"
+          class="w-1/2"
+        ></app-qr-select>
+        <app-qr-select
+          formControlName="regionId"
+          [controlName]="'regionId'"
+          [parentGroup]="deparmtentForm"
+          [options]="types"
+          [label]="'Region'"
+          [placeholder]="'select region'"
+          [required]="true"
+          class="w-1/2"
+        ></app-qr-select>
+      </div>
+    </section>
+  </form>
+</div>
+<app-modal-footer
+  [submitText]="'Save & Submit'"
+  (isSubmitted)="submit()"
+></app-modal-footer>

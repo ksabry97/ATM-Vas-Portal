@@ -10,7 +10,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 })
 export class ModalFooter {
   @Input() submitText!: string;
-  @Input() subText!: string;
+  @Input() subText: string = '';
   @Input() disabled = false;
   @Output() isSubmitted = new EventEmitter();
   @Output() subSubmitted = new EventEmitter();

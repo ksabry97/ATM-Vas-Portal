@@ -53,7 +53,7 @@ export class QrSidebar {
       sideRoutes: [
         {
           label: 'Departments',
-          route: 'dashboard',
+          route: 'departments',
         },
         {
           label: 'Roles',

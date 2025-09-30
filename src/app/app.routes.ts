@@ -9,6 +9,7 @@ import { FeesList } from './modules/fees/pages/fees-list/fees-list';
 import { TemplateSetup } from './modules/services-managment/pages/template-setup/template-setup';
 import { ServicesSetup } from './modules/services-managment/pages/services-setup/services-setup';
 import { ValueSetup } from './modules/services-managment/pages/value-setup/value-setup';
+import { DepartmentsList } from './modules/users/pages/departments-list/departments-list';
 
 export const routes: Routes = [
   {
@@ -41,6 +42,10 @@ export const routes: Routes = [
       {
         path: 'value-setup',
         component: ValueSetup,
+      },
+      {
+        path: 'departments',
+        component: DepartmentsList,
       },
     ],
   },
