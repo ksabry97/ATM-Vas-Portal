@@ -61,7 +61,7 @@ export class QrSidebar {
         },
         {
           label: 'User List',
-          route: 'dashboard',
+          route: 'users',
         },
       ],
     },
