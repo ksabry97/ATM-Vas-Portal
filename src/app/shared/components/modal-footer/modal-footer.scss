@@ -1,11 +1,7 @@
-footer {
-  padding: 16px;
-
-  .buttons {
-    width: 100%;
-    gap: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.secondary-btn {
+  border: 1px solid #4c4cff96;
+  height: 42px;
+  &:disabled {
+    opacity: 0.3;
   }
 }

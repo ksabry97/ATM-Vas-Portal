@@ -1,1 +1,110 @@
-<p>create-template works!</p>
+<app-modal-header
+  [description]="'configure a new ATM service endpoint and settings'"
+  [title]="'Create services Template'"
+></app-modal-header>
+<div class="content">
+  <form [formGroup]="templateGroup" class="flex flex-col gap-5">
+    <section
+      class="flex w-full items-end justify-between gap-3"
+      [ngClass]="{
+        'items-center':
+          templateGroup.get('serviceTemplateName')?.invalid &&
+          templateGroup.get('serviceTemplateName')?.touched
+      }"
+    >
+      <app-qr-input
+        class="w-1/2"
+        [label]="'Services Template Name'"
+        [placeholder]="'ex. pay bills'"
+        formControlName="serviceTemplateName"
+        [controlName]="'serviceTemplateName'"
+        [parentGroup]="templateGroup"
+        [filled]="true"
+        [required]="true"
+      ></app-qr-input>
+      <div class="flex items-center justify-between w-1/2 mb-2">
+        <label>Enable Service </label>
+        <nz-switch formControlName="isActive"></nz-switch>
+      </div>
+    </section>
+    <section
+      class="flex w-full gap-3 flex-col"
+      [ngClass]="{ 'last-section': serviceTemplateFields.length < 1 }"
+    >
+      <label>Fixed Fields </label>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2 w-1/2 mb-2">
+          <nz-switch formControlName="showServiceValue"></nz-switch>
+          <label>Show services value </label>
+        </div>
+        <div class="flex items-center gap-2 w-1/2 mb-2">
+          <nz-switch formControlName="showFeesValue"></nz-switch>
+          <label>Show fees value </label>
+        </div>
+        <div class="flex items-center gap-2 w-1/2 mb-2">
+          <nz-switch formControlName="showItemCountValue"></nz-switch>
+          <label>Show item count value </label>
+        </div>
+      </div>
+    </section>
+    <section
+      class="flex w-full gap-4 last-section flex-col"
+      formArrayName="serviceTemplateFields"
+      *ngIf="serviceTemplateFields.length > 0"
+    >
+      <div
+        *ngFor="let field of serviceTemplateFields.controls; let i = index"
+        [formGroupName]="i"
+        class="flex justify-between w-full gap-3"
+      >
+        <app-qr-input
+          [label]="'Field Name'"
+          [placeholder]="'ex. pay bills'"
+          formControlName="fieldName"
+          [controlName]="'fieldName'"
+          [parentGroup]="field"
+          [filled]="true"
+          [required]="true"
+        ></app-qr-input>
+        <app-qr-select
+          formControlName="subType"
+          [controlName]="'subType'"
+          [parentGroup]="field"
+          [options]="types"
+          [label]="'Type'"
+          [placeholder]="'select type'"
+          [required]="true"
+          class="w-1/5"
+        ></app-qr-select>
+        <app-qr-input-number
+          [disabled]="field.get('subType')?.value !== '1'"
+          [label]="'Max Characters'"
+          [placeholder]="'ex. pay bills'"
+          formControlName="maxLength"
+          [controlName]="'maxLength'"
+          [parentGroup]="field"
+          [filled]="true"
+        ></app-qr-input-number>
+        <button
+          class="delete flex gap-2 p-3 h-8 mt-9 justify-center items-center rounded-md"
+          (click)="removeTemplate(i)"
+        >
+          <nz-icon nzType="delete" nzTheme="outline" style="color: #c90707" />
+          Delete
+        </button>
+
+        <div class="flex items-center gap-1 h-24">
+          <label>Active </label>
+          <nz-switch formControlName="active"></nz-switch>
+        </div>
+      </div>
+    </section>
+  </form>
+</div>
+<app-modal-footer
+  [submitText]="'Save & Submit'"
+  [subText]="'Custom Fields'"
+  (subSubmitted)="addTemplateField()"
+  (isSubmitted)="submit()"
+  [disabled]="serviceTemplateFields.length > 2"
+></app-modal-footer>

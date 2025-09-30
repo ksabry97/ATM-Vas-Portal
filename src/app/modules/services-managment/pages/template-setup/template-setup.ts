@@ -9,6 +9,7 @@ import { EntityHeader } from '../../../../shared/components/entity-header/entity
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 import { EntityCard } from '../../../../shared/components/entity-card/entity-card';
 import { CommonModule } from '@angular/common';
+import { CreateTemplate } from '../../components/create-template/create-template';
 
 @Component({
   selector: 'app-template-setup',
@@ -18,6 +19,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TemplateSetup {
   globalServ = inject(GlobalService);
+  createTemplate = CreateTemplate;
   items = [
     {
       label: 'Total Template',

@@ -1,0 +1,11 @@
+:host ::ng-deep {
+  .ant-select-single.ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border-radius: 8px;
+    height: 42px;
+    background: #f3f3f3;
+  }
+  .ant-select-arrow {
+    top: 69%;
+  }
+}
