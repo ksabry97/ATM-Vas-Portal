@@ -15,7 +15,7 @@ label {
 }
 
 section {
-  border-bottom: 1px solid #e5e7eb;
+  border: 1px solid #f3f3f3;
   padding-bottom: 24px;
   &.last-section {
     border: none;
@@ -26,8 +26,7 @@ section {
 textarea {
   resize: none;
   border-radius: 8px;
-  height: 120px;
-  background: #f3f3f3;
+  height: 80px;
   border: 1px solid #e5e7eb;
   &:hover {
     border-color: #40a9ff;

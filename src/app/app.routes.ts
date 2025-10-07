@@ -6,10 +6,9 @@ import { ForgetPassword } from './modules/authentication/pages/forget-password/f
 import { Dashboard } from './modules/dashboard/pages/dashboard/dashboard';
 import { UserList } from './modules/users/pages/user-list/user-list';
 import { FeesList } from './modules/fees/pages/fees-list/fees-list';
-import { TemplateSetup } from './modules/services-managment/pages/template-setup/template-setup';
-import { ServicesSetup } from './modules/services-managment/pages/services-setup/services-setup';
-import { ValueSetup } from './modules/services-managment/pages/value-setup/value-setup';
-import { DepartmentsList } from './modules/users/pages/departments-list/departments-list';
+import { TenantList } from './modules/tenants/pages/tenant-list/tenant-list';
+import { AuditLogsList } from './modules/auditLogs/pages/audit-logs-list/audit-logs-list';
+import { RolesList } from './modules/users/pages/roles-list/roles-list';
 
 export const routes: Routes = [
   {
@@ -26,26 +25,21 @@ export const routes: Routes = [
         path: 'users',
         component: UserList,
       },
-
+      {
+        path: 'roles',
+        component: RolesList,
+      },
       {
         path: 'fees',
         component: FeesList,
       },
       {
-        path: 'template-setup',
-        component: TemplateSetup,
+        path: 'tenants',
+        component: TenantList,
       },
       {
-        path: 'services-setup',
-        component: ServicesSetup,
-      },
-      {
-        path: 'value-setup',
-        component: ValueSetup,
-      },
-      {
-        path: 'departments',
-        component: DepartmentsList,
+        path: 'audit-logs',
+        component: AuditLogsList,
       },
     ],
   },

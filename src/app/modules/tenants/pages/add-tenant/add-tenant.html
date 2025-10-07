@@ -1,0 +1,70 @@
+<app-modal-header
+  [description]="'configure a new ATM service endpoint and settings'"
+  [title]="'Add new tenant'"
+></app-modal-header>
+<div class="content">
+  <form [formGroup]="tenantForm" class="flex flex-col gap-3">
+    <section class="flex w-full flex-col gap-3 p-2 rounded-md">
+      <label>Basic Information</label>
+      <div class="flex gap-3">
+        <app-qr-input
+          class="w-1/2"
+          [label]="'Tenant Name'"
+          [placeholder]="'enter tenant name'"
+          formControlName="tenantName"
+          [controlName]="'tenantName'"
+          [parentGroup]="tenantForm"
+          [required]="true"
+        ></app-qr-input>
+        <app-qr-input
+          class="w-1/2"
+          [label]="'Tenant Code'"
+          [placeholder]="'enter tenant code'"
+          formControlName="tenantCode"
+          [controlName]="'tenantCode'"
+          [parentGroup]="tenantForm"
+          [required]="true"
+        ></app-qr-input>
+      </div>
+      <div class="flex gap-3">
+        <app-qr-select
+          formControlName="countryId"
+          [controlName]="'countryId'"
+          [parentGroup]="tenantForm"
+          [options]="types"
+          [label]="'Country'"
+          [placeholder]="'select country'"
+          [required]="true"
+          class="w-1/2"
+        ></app-qr-select>
+      </div>
+      <div class="flex gap-2 flex-col">
+        <label>Description</label>
+        <textarea
+          class="p-3"
+          placeholder="write here what services do..."
+          formControlName="description"
+        ></textarea>
+      </div>
+      <label>Services</label>
+      <div class="flex justify-between w-full">
+        <div class="flex items-center gap-3 w-1/3">
+          <label>Bills Payment </label>
+          <nz-switch formControlName="billPayment"></nz-switch>
+        </div>
+        <div class="flex items-center gap-3 w-1/3">
+          <label>Cash out </label>
+          <nz-switch formControlName="cashout"></nz-switch>
+        </div>
+        <div class="flex items-center gap-3 w-1/3">
+          <label>Allow VAT </label>
+          <nz-switch formControlName="service"></nz-switch>
+        </div>
+      </div>
+    </section>
+  </form>
+</div>
+<app-modal-footer
+  [submitText]="'Save & Submit'"
+  (isSubmitted)="submit()"
+></app-modal-footer>

@@ -1,19 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {
-  ReactiveFormsModule,
-  FormGroup,
   FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 import { ModalFooter } from '../../../../shared/components/modal-footer/modal-footer';
 import { ModalHeader } from '../../../../shared/components/modal-header/modal-header';
 import { QrInput } from '../../../../shared/components/qr-input/qr-input';
 import { QrSelect } from '../../../../shared/components/qr-select/qr-select';
-import { QrPassword } from '../../../../shared/components/qr-password/qr-password';
-
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
 @Component({
-  selector: 'app-create-user',
+  selector: 'app-add-tenant',
   imports: [
     CommonModule,
     ModalHeader,
@@ -21,13 +20,13 @@ import { QrPassword } from '../../../../shared/components/qr-password/qr-passwor
     ReactiveFormsModule,
     QrInput,
     QrSelect,
-    QrPassword,
+    NzSwitchModule,
   ],
-  templateUrl: './create-user.html',
-  styleUrl: './create-user.scss',
+  templateUrl: './add-tenant.html',
+  styleUrl: './add-tenant.scss',
 })
-export class CreateUser {
-  userForm!: FormGroup;
+export class AddTenant {
+  tenantForm!: FormGroup;
   types = [
     {
       text: 'Development',
@@ -44,16 +43,18 @@ export class CreateUser {
   ];
 
   constructor(private fb: FormBuilder) {
-    this.userForm = this.fb.group({
-      email: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      tenantId: [''],
-      password: [''],
-      confirmPassword: [''],
+    this.tenantForm = this.fb.group({
+      tenantName: ['', Validators.required],
+      tenantCode: ['', Validators.required],
+      countryId: ['', Validators.required],
+      environmentId: ['', Validators.required],
+      description: [''],
+      billPayment: [false],
+      cashout: [false],
+      service: [false],
     });
   }
   submit() {
-    console.log(this.userForm.value);
+    console.log(this.tenantForm.value);
   }
 }

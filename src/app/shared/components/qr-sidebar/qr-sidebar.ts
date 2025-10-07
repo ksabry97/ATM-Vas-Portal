@@ -19,28 +19,23 @@ export class QrSidebar {
       isOpened: false,
     },
     {
-      label: 'Services Managment',
+      label: 'Tenants',
       route: 'tenants',
-      icon: 'setting',
+      icon: 'dashboard',
+      sideRoutes: [],
       isOpened: false,
-      sideRoutes: [
-        {
-          label: 'Template Setup',
-          route: 'template-setup',
-        },
-        {
-          label: 'Services',
-          route: 'services-setup',
-        },
-        {
-          label: 'Value Setup',
-          route: 'value-setup',
-        },
-      ],
     },
+
     {
       label: 'Fees Profile',
       route: 'fees',
+      icon: 'credit-card',
+      sideRoutes: [],
+      isOpened: false,
+    },
+    {
+      label: 'Audit Logs',
+      route: 'audit-logs',
       icon: 'credit-card',
       sideRoutes: [],
       isOpened: false,
@@ -52,12 +47,8 @@ export class QrSidebar {
       isOpened: false,
       sideRoutes: [
         {
-          label: 'Departments',
-          route: 'departments',
-        },
-        {
           label: 'Roles',
-          route: 'dashboard',
+          route: 'roles',
         },
         {
           label: 'User List',
