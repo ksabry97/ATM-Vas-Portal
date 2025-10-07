@@ -11,7 +11,7 @@
         />
         <img src="assets/paysky-title-white.svg" />
       </div>
-      <h1>Paysky ATM VAS</h1>
+      <h1>{{ 'app.brand' | translate }}</h1>
     </div>
   </div>
   <div class="right w-5/12 flex justify-center items-center">
@@ -19,31 +19,29 @@
       class="form-container flex flex-col gap-4 w-3/4 h-fit p-4 rounded-md"
       [formGroup]="loginForm"
     >
-      <h1>Login</h1>
+      <h1>{{ 'auth.login_title' | translate }}</h1>
 
       <app-qr-input
-        [label]="'Email'"
-        [placeholder]="'enter your email'"
+        [label]="'common.email'"
+        [placeholder]="'common.enter_email'"
         formControlName="email"
         [controlName]="'email'"
         [parentGroup]="loginForm"
       ></app-qr-input>
       <app-qr-password
-        [label]="'Password'"
-        [placeholder]="'enter your password'"
+        [label]="'common.password'"
+        [placeholder]="'common.enter_password'"
         formControlName="password"
         [controlName]="'password'"
         [parentGroup]="loginForm"
       ></app-qr-password>
 
-      <span class="w-full flex justify-end forget" (click)="forgetPassword()"
-        >forget password</span
-      >
+      <span class="w-full flex justify-end forget" (click)="forgetPassword()">{{ 'common.forget_password' | translate }}</span>
       <button
         class="w-full submit-btn border-0 rounded-md outline-none"
         (click)="submitLogin()"
       >
-        Send OTP
+        {{ 'common.send_otp' | translate }}
       </button>
     </form>
   </div>

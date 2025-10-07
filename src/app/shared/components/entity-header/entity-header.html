@@ -1,7 +1,7 @@
 <div class="w-full rounded-md flex justify-between items-center p-4 bg-white">
   <p class="flex flex-col">
-    {{ title }}
-    <span>{{ description }} </span>
+    {{ title | translate }}
+    <span>{{ description | translate }} </span>
   </p>
   <div class="flex gap-3">
     <button class="export-btn rounded-md p-2 flex gap-2 items-center">
@@ -10,7 +10,7 @@
         nzTheme="outline"
         style="font-size: 14px; color: #1d1d1b"
       ></nz-icon>
-      Export CVS
+      {{ 'common.export_csv' | translate }}
     </button>
     <button
       class="submit-btn rounded-md p-2 flex gap-2 items-center"
@@ -22,7 +22,7 @@
         nzTheme="outline"
         style="font-size: 12px; color: #fff"
       ></nz-icon>
-      Create
+      {{ 'common.create' | translate }}
     </button>
   </div>
 </div>

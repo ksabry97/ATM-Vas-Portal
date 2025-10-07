@@ -8,10 +8,11 @@ import {
 import { GlobalService } from '../../../../shared/services/global.service';
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 import { AddFee } from '../add-fee/add-fee';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-fees-list',
-  imports: [EntityHeader, QrTable, QrModal],
+  imports: [EntityHeader, QrTable, QrModal, TranslateModule],
   templateUrl: './fees-list.html',
   styleUrl: './fees-list.scss',
 })

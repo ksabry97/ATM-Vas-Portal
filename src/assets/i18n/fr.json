@@ -1,0 +1,115 @@
+{
+  "app": {
+    "title": "ATM VAS",
+    "brand": "Paysky ATM VAS"
+  },
+  "common": {
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "enter_email": "entrez votre e-mail",
+    "enter_password": "entrez votre mot de passe",
+    "continue": "Continuer",
+    "back_to_login": "Retour à la connexion",
+    "send_otp": "Envoyer OTP",
+    "forget_password": "mot de passe oublié",
+    "login": "Connexion",
+    "bills": "Factures",
+    "cash_out": "Retrait",
+    "service": "Service",
+    "last_update": "Dernière mise à jour {{time}}",
+    "actions": "Actions",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "no_data": "Aucune donnée disponible",
+    "export_csv": "Exporter CSV",
+    "create": "Créer",
+    "save_submit": "Enregistrer et soumettre"
+  },
+  "dashboard": {
+    "system_overview": "Aperçu du système",
+    "realtime_metrics": "Mesures en temps réel et indicateurs de performance pour la gestion de vos services ATM",
+    "tenants": "Locataires",
+    "fees": "Frais",
+    "atms": "DAB",
+    "system_users": "Utilisateurs du système"
+  },
+  "sidebar": {
+    "dashboard": "Tableau de bord",
+    "tenants": "Locataires",
+    "fees_profile": "Profil des frais",
+    "audit_logs": "Journaux d'audit",
+    "users_management": "Gestion des utilisateurs",
+    "roles": "Rôles",
+    "user_list": "Liste des utilisateurs"
+  },
+  "auth": {
+    "login_title": "Connexion",
+    "forget_password_title": "Mot de passe oublié",
+    "otp": "OTP",
+    "otp_instructions": "Un OTP a été envoyé à votre e-mail enregistré, veuillez saisir l'OTP pour continuer :",
+    "resend": "Renvoyer"
+  },
+  "fees": {
+    "add": {
+      "title": "Créer des frais de services",
+      "description": "configurer un nouvel endpoint de service ATM et ses paramètres"
+    },
+    "name": "Nom des frais",
+    "name_placeholder": "ex. payer des factures",
+    "enable": "Activer les frais",
+    "value": "Valeur",
+    "fixed_amount": "Montant fixe",
+    "amount_placeholder": "ex. payer des factures",
+    "percentage": "Pourcentage",
+    "percentage_placeholder": "ex. payer des factures",
+    "allow_vat": "Autoriser la TVA",
+    "list": {
+      "title": "Gestion des profils de frais",
+      "description": "Créer et gérer la structure des frais pour les services ATM"
+    }
+  },
+  "tenants": {
+    "add": {
+      "title": "Ajouter un nouveau locataire",
+      "description": "configurer un nouvel endpoint de service ATM et ses paramètres",
+      "basic_information": "Informations de base",
+      "tenant_name": "Nom du locataire",
+      "tenant_name_placeholder": "entrer le nom du locataire",
+      "tenant_code": "Code du locataire",
+      "tenant_code_placeholder": "entrer le code du locataire",
+      "country": "Pays",
+      "select_country": "sélectionner un pays",
+      "description_label": "Description",
+      "description_placeholder": "écrire ici ce que font les services...",
+      "services": "Services",
+      "bills_payment": "Paiement de factures",
+      "cash_out": "Retrait",
+      "allow_vat": "Autoriser la TVA"
+    },
+    "list": { "title": "Gestion des locataires" }
+  },
+  "users": {
+    "roles": {
+      "title": "Gestion des rôles",
+      "description": "Gérer l'accès des utilisateurs, les rôles et les permissions"
+    },
+    "list": {
+      "title": "Gestion des utilisateurs",
+      "description": "Gérer l'accès des utilisateurs, les rôles et les permissions"
+    }
+  },
+  "services": {
+    "setup": {
+      "title": "Configuration des services",
+      "description": "Gérer les services ATM, les configurations et le monitoring"
+    },
+    "template": {
+      "title": "Configuration des modèles",
+      "description": "Gérer les services ATM, les configurations et le monitoring"
+    },
+    "value": {
+      "title": "Configuration des valeurs",
+      "description": "Gérer les services ATM, les configurations et le monitoring"
+    }
+  }
+}

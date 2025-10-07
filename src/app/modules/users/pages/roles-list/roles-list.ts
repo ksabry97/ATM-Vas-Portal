@@ -8,10 +8,11 @@ import { GlobalService } from '../../../../shared/services/global.service';
 import { CreateRole } from '../../components/create-role/create-role';
 import { EntityHeader } from '../../../../shared/components/entity-header/entity-header';
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-roles-list',
-  imports: [EntityHeader, QrTable, QrModal],
+  imports: [EntityHeader, QrTable, QrModal, TranslateModule],
   templateUrl: './roles-list.html',
   styleUrl: './roles-list.scss',
 })

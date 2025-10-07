@@ -11,6 +11,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { ErrorMessages } from '../../services/error-messages.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 export interface ValidationRule {
   type: 'required' | 'minLength' | 'maxLength' | 'pattern' | 'email' | 'custom';
@@ -28,6 +29,7 @@ export interface ValidationRule {
     NzButtonModule,
     NzIconModule,
     FormsModule,
+    TranslateModule,
   ],
   providers: [
     {

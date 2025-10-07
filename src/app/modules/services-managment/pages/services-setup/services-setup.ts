@@ -10,10 +10,11 @@ import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 import { CommonModule } from '@angular/common';
 import { EntityCard } from '../../../../shared/components/entity-card/entity-card';
 import { CreateService } from '../../components/create-service/create-service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-services-setup',
-  imports: [EntityHeader, QrTable, QrModal, EntityCard, CommonModule],
+  imports: [EntityHeader, QrTable, QrModal, EntityCard, CommonModule, TranslateModule],
   templateUrl: './services-setup.html',
   styleUrl: './services-setup.scss',
 })

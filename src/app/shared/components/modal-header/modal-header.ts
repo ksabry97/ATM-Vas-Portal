@@ -1,10 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { GlobalService } from '../../services/global.service';
 
 @Component({
   selector: 'app-modal-header',
-  imports: [NzIconModule],
+  imports: [NzIconModule, TranslateModule],
   templateUrl: './modal-header.html',
   styleUrl: './modal-header.scss',
 })

@@ -8,10 +8,11 @@ import {
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 import { GlobalService } from '../../../../shared/services/global.service';
 import { AddTenant } from '../add-tenant/add-tenant';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tenant-list',
-  imports: [EntityHeader, QrTable, QrModal],
+  imports: [EntityHeader, QrTable, QrModal, TranslateModule],
   templateUrl: './tenant-list.html',
   styleUrl: './tenant-list.scss',
 })

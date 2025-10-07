@@ -22,14 +22,14 @@
             *ngIf="col.sortable !== false"
             [style.width]="col.width"
           >
-            {{ col.header }}
+            {{ col.header | translate }}
           </th>
           <th *ngIf="col.sortable === false" [style.width]="col.width">
-            {{ col.header }}
+            {{ col.header | translate }}
           </th>
         </ng-container>
         <th *ngIf="actions && actions.length > 0" style="width: 120px">
-          Actions
+          {{ 'common.actions' | translate }}
         </th>
       </tr>
     </thead>
@@ -52,7 +52,7 @@
               [class.active]="rowData[col.field]"
               [class.inactive]="!rowData[col.field]"
             >
-              {{ rowData[col.field] ? "Active" : "Inactive" }}
+              {{ rowData[col.field] ? ('common.active' | translate) : ('common.inactive' | translate) }}
             </span>
           </td>
           <td *ngIf="!col.template">
@@ -84,7 +84,7 @@
           nzTheme="outline"
           style="font-size: 3rem; color: #ccc"
         ></i>
-        <p>No data available</p>
+        <p>{{ 'common.no_data' | translate }}</p>
       </div>
     </ng-template>
   </nz-table>

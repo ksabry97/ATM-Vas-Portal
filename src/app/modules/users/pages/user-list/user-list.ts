@@ -8,10 +8,11 @@ import { GlobalService } from '../../../../shared/services/global.service';
 import { EntityHeader } from '../../../../shared/components/entity-header/entity-header';
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 import { CreateUser } from '../../components/create-user/create-user';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-user-list',
-  imports: [EntityHeader, QrTable, QrModal],
+  imports: [EntityHeader, QrTable, QrModal, TranslateModule],
   templateUrl: './user-list.html',
   styleUrl: './user-list.scss',
 })

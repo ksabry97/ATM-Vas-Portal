@@ -1,10 +1,11 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { OTPInput } from '../../../../shared/components/otp-input/otp-input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { TranslateModule } from '@ngx-translate/core';
 import { GlobalService } from '../../../../shared/services/global.service';
 @Component({
   selector: 'app-otp-modal',
-  imports: [OTPInput, NzIconModule],
+  imports: [OTPInput, NzIconModule, TranslateModule],
   templateUrl: './otp-modal.html',
   styleUrl: './otp-modal.scss',
 })

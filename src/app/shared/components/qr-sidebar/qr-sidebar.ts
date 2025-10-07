@@ -2,9 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-qr-sidebar',
-  imports: [CommonModule, RouterModule, NzIconModule],
+  imports: [CommonModule, RouterModule, NzIconModule, TranslateModule],
   templateUrl: './qr-sidebar.html',
   styleUrl: './qr-sidebar.scss',
 })
@@ -12,14 +13,14 @@ export class QrSidebar {
   router = inject(Router);
   routes = [
     {
-      label: 'Dashboard',
+      label: 'sidebar.dashboard',
       route: 'dashboard',
       icon: 'dashboard',
       sideRoutes: [],
       isOpened: false,
     },
     {
-      label: 'Tenants',
+      label: 'sidebar.tenants',
       route: 'tenants',
       icon: 'dashboard',
       sideRoutes: [],
@@ -27,31 +28,31 @@ export class QrSidebar {
     },
 
     {
-      label: 'Fees Profile',
+      label: 'sidebar.fees_profile',
       route: 'fees',
       icon: 'credit-card',
       sideRoutes: [],
       isOpened: false,
     },
     {
-      label: 'Audit Logs',
+      label: 'sidebar.audit_logs',
       route: 'audit-logs',
       icon: 'credit-card',
       sideRoutes: [],
       isOpened: false,
     },
     {
-      label: 'Users Managment',
+      label: 'sidebar.users_management',
       route: 'roles',
       icon: 'user',
       isOpened: false,
       sideRoutes: [
         {
-          label: 'Roles',
+          label: 'sidebar.roles',
           route: 'roles',
         },
         {
-          label: 'User List',
+          label: 'sidebar.user_list',
           route: 'users',
         },
       ],

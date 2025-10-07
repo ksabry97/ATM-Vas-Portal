@@ -12,10 +12,11 @@ import { Router } from '@angular/router';
 import { OtpModal } from '../otp-modal/otp-modal';
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 import { GlobalService } from '../../../../shared/services/global.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
-  imports: [CommonModule, ReactiveFormsModule, QrInput, QrPassword, QrModal],
+  imports: [CommonModule, ReactiveFormsModule, QrInput, QrPassword, QrModal, TranslateModule],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })

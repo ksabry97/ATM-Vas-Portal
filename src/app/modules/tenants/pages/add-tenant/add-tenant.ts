@@ -11,6 +11,7 @@ import { ModalHeader } from '../../../../shared/components/modal-header/modal-he
 import { QrInput } from '../../../../shared/components/qr-input/qr-input';
 import { QrSelect } from '../../../../shared/components/qr-select/qr-select';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-add-tenant',
   imports: [
@@ -21,6 +22,7 @@ import { NzSwitchModule } from 'ng-zorro-antd/switch';
     QrInput,
     QrSelect,
     NzSwitchModule,
+    TranslateModule,
   ],
   templateUrl: './add-tenant.html',
   styleUrl: './add-tenant.scss',

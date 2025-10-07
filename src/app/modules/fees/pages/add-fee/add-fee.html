@@ -1,6 +1,6 @@
 <app-modal-header
-  [description]="'configure a new ATM service endpoint and settings'"
-  [title]="'Create services fees'"
+  [description]="'fees.add.description'"
+  [title]="'fees.add.title'"
 ></app-modal-header>
 <div class="content">
   <form [formGroup]="feeGroup" class="flex flex-col gap-5">
@@ -14,8 +14,8 @@
     >
       <app-qr-input
         class="w-1/2"
-        [label]="'Fees name'"
-        [placeholder]="'ex. pay bills'"
+        [label]="'fees.name'"
+        [placeholder]="'fees.name_placeholder'"
         formControlName="feesProfileName"
         [controlName]="'feesProfileName'"
         [parentGroup]="feeGroup"
@@ -23,19 +23,19 @@
         [required]="true"
       ></app-qr-input>
       <div class="flex items-center justify-between w-1/2 mb-2">
-        <label>Enable Fees </label>
+        <label>{{ 'fees.enable' | translate }} </label>
         <nz-switch formControlName="isActive"></nz-switch>
       </div>
     </section>
     <section class="flex w-full gap-3 flex-col">
-      <label>Value </label>
+      <label>{{ 'fees.value' | translate }} </label>
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-3 w-1/2">
           <input type="radio" formControlName="feesProfileType" [value]="1" />
-          <label>Fixed Amount</label>
+          <label>{{ 'fees.fixed_amount' | translate }}</label>
           <app-qr-input-number
             class="w-3/5"
-            [placeholder]="'ex. pay bills'"
+            [placeholder]="'fees.amount_placeholder'"
             formControlName="fixedAmount"
             [controlName]="'fixedAmount'"
             [parentGroup]="feeGroup"
@@ -47,10 +47,10 @@
         </div>
         <div class="flex items-center gap-3 w-1/2">
           <input type="radio" formControlName="feesProfileType" [value]="2" />
-          <label>Percentage </label>
+          <label>{{ 'fees.percentage' | translate }} </label>
           <app-qr-input-number
             class="w-3/5"
-            [placeholder]="'ex. pay bills'"
+            [placeholder]="'fees.percentage_placeholder'"
             formControlName="percentage"
             [controlName]="'percentage'"
             [parentGroup]="feeGroup"
@@ -63,10 +63,10 @@
     </section>
     <section class="flex w-full items-end justify-between gap-3 last-section">
       <div class="flex items-center justify-between w-1/2 mb-2">
-        <label>Allow VAT </label>
+        <label>{{ 'fees.allow_vat' | translate }} </label>
         <nz-switch formControlName="isVatEnabled"></nz-switch>
       </div>
     </section>
   </form>
 </div>
-<app-modal-footer [submitText]="'Save & Submit'"></app-modal-footer>
+<app-modal-footer [submitText]="'common.save_submit'"></app-modal-footer>

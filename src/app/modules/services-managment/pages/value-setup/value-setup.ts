@@ -8,10 +8,11 @@ import { GlobalService } from '../../../../shared/services/global.service';
 import { EntityHeader } from '../../../../shared/components/entity-header/entity-header';
 import { QrModal } from '../../../../shared/components/qr-modal/qr-modal';
 import { CreateValue } from '../../components/create-value/create-value';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-value-setup',
-  imports: [EntityHeader, QrTable, QrModal],
+  imports: [EntityHeader, QrTable, QrModal, TranslateModule],
   templateUrl: './value-setup.html',
   styleUrl: './value-setup.scss',
 })

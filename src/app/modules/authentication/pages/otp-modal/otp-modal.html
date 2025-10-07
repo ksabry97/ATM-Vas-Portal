@@ -5,15 +5,14 @@
     class="icon"
     (click)="closeModal()"
   />
-  <h1>OTP</h1>
+  <h1>{{ 'auth.otp' | translate }}</h1>
   <p class="w-3/5">
-    One time OTP has been sent your registered email, please enter the OTP to
-    continue:
+    {{ 'auth.otp_instructions' | translate }}
   </p>
   <app-otp-input></app-otp-input>
   <span>{{ formatTime(timer) }}</span>
   <button class="resend" [disabled]="!resend" (click)="startTimer()">
-    Resend
+    {{ 'auth.resend' | translate }}
   </button>
-  <button class="rounded-md submit-btn p-2">Login</button>
+  <button class="rounded-md submit-btn p-2">{{ 'auth.login_title' | translate }}</button>
 </div>

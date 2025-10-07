@@ -1,13 +1,13 @@
 <div class="ngx-smart-input-container">
   <label *ngIf="label" class="input-label" [class.required]="required">
-    {{ label }}
+    {{ label | translate }}
   </label>
 
   <!-- Text Input -->
   <div class="input-wrapper" [ngClass]="{ filled: filled }">
     <input
       nz-input
-      [placeholder]="placeholder"
+      [placeholder]="placeholder | translate"
       [disabled]="disabled"
       [readonly]="readonly"
       [type]="type"

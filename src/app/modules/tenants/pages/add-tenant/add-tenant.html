@@ -1,16 +1,16 @@
 <app-modal-header
-  [description]="'configure a new ATM service endpoint and settings'"
-  [title]="'Add new tenant'"
+  [description]="'tenants.add.description'"
+  [title]="'tenants.add.title'"
 ></app-modal-header>
 <div class="content">
   <form [formGroup]="tenantForm" class="flex flex-col gap-3">
     <section class="flex w-full flex-col gap-3 p-2 rounded-md">
-      <label>Basic Information</label>
+      <label>{{ 'tenants.add.basic_information' | translate }}</label>
       <div class="flex gap-3">
         <app-qr-input
           class="w-1/2"
-          [label]="'Tenant Name'"
-          [placeholder]="'enter tenant name'"
+          [label]="'tenants.add.tenant_name'"
+          [placeholder]="'tenants.add.tenant_name_placeholder'"
           formControlName="tenantName"
           [controlName]="'tenantName'"
           [parentGroup]="tenantForm"
@@ -18,8 +18,8 @@
         ></app-qr-input>
         <app-qr-input
           class="w-1/2"
-          [label]="'Tenant Code'"
-          [placeholder]="'enter tenant code'"
+          [label]="'tenants.add.tenant_code'"
+          [placeholder]="'tenants.add.tenant_code_placeholder'"
           formControlName="tenantCode"
           [controlName]="'tenantCode'"
           [parentGroup]="tenantForm"
@@ -32,32 +32,32 @@
           [controlName]="'countryId'"
           [parentGroup]="tenantForm"
           [options]="types"
-          [label]="'Country'"
-          [placeholder]="'select country'"
+          [label]="'tenants.add.country'"
+          [placeholder]="'tenants.add.select_country'"
           [required]="true"
           class="w-1/2"
         ></app-qr-select>
       </div>
       <div class="flex gap-2 flex-col">
-        <label>Description</label>
+        <label>{{ 'tenants.add.description_label' | translate }}</label>
         <textarea
           class="p-3"
-          placeholder="write here what services do..."
+          placeholder="{{ 'tenants.add.description_placeholder' | translate }}"
           formControlName="description"
         ></textarea>
       </div>
-      <label>Services</label>
+      <label>{{ 'tenants.add.services' | translate }}</label>
       <div class="flex justify-between w-full">
         <div class="flex items-center gap-3 w-1/3">
-          <label>Bills Payment </label>
+          <label>{{ 'tenants.add.bills_payment' | translate }} </label>
           <nz-switch formControlName="billPayment"></nz-switch>
         </div>
         <div class="flex items-center gap-3 w-1/3">
-          <label>Cash out </label>
+          <label>{{ 'tenants.add.cash_out' | translate }} </label>
           <nz-switch formControlName="cashout"></nz-switch>
         </div>
         <div class="flex items-center gap-3 w-1/3">
-          <label>Allow VAT </label>
+          <label>{{ 'tenants.add.allow_vat' | translate }} </label>
           <nz-switch formControlName="service"></nz-switch>
         </div>
       </div>
@@ -65,6 +65,6 @@
   </form>
 </div>
 <app-modal-footer
-  [submitText]="'Save & Submit'"
+  [submitText]="'common.save_submit'"
   (isSubmitted)="submit()"
 ></app-modal-footer>

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-modal-footer',
-  imports: [NzIconModule, CommonModule],
+  imports: [NzIconModule, CommonModule, TranslateModule],
   templateUrl: './modal-footer.html',
   styleUrl: './modal-footer.scss',
 })

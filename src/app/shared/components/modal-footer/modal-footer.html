@@ -10,10 +10,10 @@
       [disabled]="disabled"
     >
       <nz-icon nzType="plus" nzTheme="outline" />
-      {{ subText }}
+      {{ subText | translate }}
     </button>
     <button class="submit-btn rounded-md p-2" (click)="submit()">
-      {{ submitText }}
+      {{ submitText | translate }}
     </button>
   </div>
 </footer>

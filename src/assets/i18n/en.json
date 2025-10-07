@@ -1,0 +1,115 @@
+{
+  "app": {
+    "title": "ATM VAS",
+    "brand": "Paysky ATM VAS"
+  },
+  "common": {
+    "email": "Email",
+    "password": "Password",
+    "enter_email": "enter your email",
+    "enter_password": "enter your password",
+    "continue": "Continue",
+    "back_to_login": "Back to login",
+    "send_otp": "Send OTP",
+    "forget_password": "forget password",
+    "login": "Login",
+    "bills": "Bills",
+    "cash_out": "Cash out",
+    "service": "Service",
+    "last_update": "Last Update {{time}}",
+    "actions": "Actions",
+    "active": "Active",
+    "inactive": "Inactive",
+    "no_data": "No data available",
+    "export_csv": "Export CSV",
+    "create": "Create",
+    "save_submit": "Save & Submit"
+  },
+  "dashboard": {
+    "system_overview": "System Overview",
+    "realtime_metrics": "Real time meterics and performance indicator for your ATM services managment",
+    "tenants": "Tenants",
+    "fees": "Fees",
+    "atms": "ATMs",
+    "system_users": "System Users"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "tenants": "Tenants",
+    "fees_profile": "Fees Profile",
+    "audit_logs": "Audit Logs",
+    "users_management": "Users Managment",
+    "roles": "Roles",
+    "user_list": "User List"
+  },
+  "auth": {
+    "login_title": "Login",
+    "forget_password_title": "Forget Password",
+    "otp": "OTP",
+    "otp_instructions": "One time OTP has been sent to your registered email, please enter the OTP to continue:",
+    "resend": "Resend"
+  },
+  "fees": {
+    "add": {
+      "title": "Create services fees",
+      "description": "configure a new ATM service endpoint and settings"
+    },
+    "name": "Fees name",
+    "name_placeholder": "ex. pay bills",
+    "enable": "Enable Fees",
+    "value": "Value",
+    "fixed_amount": "Fixed Amount",
+    "amount_placeholder": "ex. pay bills",
+    "percentage": "Percentage",
+    "percentage_placeholder": "ex. pay bills",
+    "allow_vat": "Allow VAT",
+    "list": {
+      "title": "Fees Profile Managment",
+      "description": "Create and manage fee structure for ATM services"
+    }
+  },
+  "tenants": {
+    "add": {
+      "title": "Add new tenant",
+      "description": "configure a new ATM service endpoint and settings",
+      "basic_information": "Basic Information",
+      "tenant_name": "Tenant Name",
+      "tenant_name_placeholder": "enter tenant name",
+      "tenant_code": "Tenant Code",
+      "tenant_code_placeholder": "enter tenant code",
+      "country": "Country",
+      "select_country": "select country",
+      "description_label": "Description",
+      "description_placeholder": "write here what services do...",
+      "services": "Services",
+      "bills_payment": "Bills Payment",
+      "cash_out": "Cash out",
+      "allow_vat": "Allow VAT"
+    },
+    "list": { "title": "Tenant Management" }
+  },
+  "users": {
+    "roles": {
+      "title": "Role Managment",
+      "description": "Manage user acces, roles and permissions"
+    },
+    "list": {
+      "title": "User Managment",
+      "description": "Manage user acces, roles and permissions"
+    }
+  },
+  "services": {
+    "setup": {
+      "title": "Services Setup",
+      "description": "Manage ATM services, configurations and monitoring"
+    },
+    "template": {
+      "title": "Template Setup",
+      "description": "Manage ATM services, configurations and monitoring"
+    },
+    "value": {
+      "title": "Value Setup",
+      "description": "Manage ATM services, configurations and monitoring"
+    }
+  }
+}

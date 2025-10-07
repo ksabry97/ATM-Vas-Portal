@@ -11,6 +11,7 @@ import {
 import { QrInput } from '../../../../shared/components/qr-input/qr-input';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { QrInputNumber } from '../../../../shared/components/qr-input-number/qr-input-number';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-add-fee',
@@ -22,6 +23,7 @@ import { QrInputNumber } from '../../../../shared/components/qr-input-number/qr-
     QrInput,
     NzSwitchModule,
     QrInputNumber,
+    TranslateModule,
   ],
   templateUrl: './add-fee.html',
   styleUrl: './add-fee.scss',

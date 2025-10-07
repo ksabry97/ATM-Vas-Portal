@@ -1,5 +1,5 @@
 <aside class="p-6">
-  <h1>ATM VAS</h1>
+  <h1>{{ 'app.title' | translate }}</h1>
   <ul class="p-2 list-none flex flex-col gap-4 w-full">
     <li *ngFor="let item of routes" class="h-fit w-full rounded-md">
       <p
@@ -8,7 +8,7 @@
       >
         <span>
           <nz-icon [nzType]="item.icon" nzTheme="outline" />
-          {{ item.label }}</span
+          {{ item.label | translate }}</span
         >
         <nz-icon
           *ngIf="item.sideRoutes.length"
@@ -23,7 +23,7 @@
           [routerLink]="side.route"
           *ngFor="let side of item.sideRoutes"
           class="p-2 rounded-md side-route"
-          >{{ side.label }}</span
+          >{{ side.label | translate }}</span
         >
       </div>
     </li>
